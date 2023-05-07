@@ -68,3 +68,19 @@ for(let day=0;day<Numofworkingdays;day++);
 }
 empWage=empHrs+Wage_Per_hrs;
 console.log("UC4-Total Hrs: "+empHrs +"Emp Wages :"+empWage);
+
+//UC5- Calculating total wages untill condition reach
+
+const Max_hrs_in_month=100;
+const num_of_working_days=10;
+let totalEmphrs=0;
+let totalworkingdays=0;
+
+while(totalEmphrs<=Max_hrs_in_month && totalworkingdays<num_of_working_days)
+{
+    totalworkingdays++;
+    let empCheck=Math.floor(Math.random()*10)%3;
+    totalEmphrs+=getWorkingHours(empCheck);
+}
+empWage= totalEmphrs*Wage_Per_hrs;
+console.log("UC5- Total days : "+totalworkingdays+" Total Hrs : "+totalEmphrs+" Emp wages : "+empWage );
