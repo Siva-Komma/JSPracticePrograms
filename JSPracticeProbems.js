@@ -21,18 +21,39 @@ const Wage_Per_hrs=20;
 {
     let empHrs=0;
     let empCheck=0;
-   empCheck =Math.floor(Math.random()*10)%3;
-   switch(empCheck)
-        {
-            case Is_Full_Time:
-                empHrs=Full_Time_Hrs;
-                break;
-            case Is_Part_Time:
-                empHrs=Part_Time_Hrs;
-                break;
-            default:
-                empHrs=0;
-        }
-        let empWage=empHrs*Wage_Per_hrs;
+    empCheck =Math.floor(Math.random()*10)%3;
+    console.log(empCheck);
+    switch(empCheck)
+    {
+        case Is_Full_Time:
+            empHrs=Full_Time_Hrs;
+            break;
+        case Is_Part_Time:
+            empHrs=Part_Time_Hrs;
+            break;
+        default:
+        empHrs=0;
+    }
+    let empWage=empHrs*Wage_Per_hrs;
     console.log("UC2- EmpWage: "+empWage);
+    
 }
+
+//uc3-Fefactor daily working hours
+let empHrs=0;
+console.log(empCheck);
+function getWorkingHours(empCheck)
+{
+    switch(empCheck)
+    {
+        case Is_Full_Time:
+            return Full_Time_Hrs;
+        case Is_Part_Time:
+            return Part_Time_Hrs;
+        default:
+            return 0;
+    }
+}
+empHrs=getWorkingHours(empCheck);
+let empWage=empHrs*Wage_Per_hrs;
+console.log("UC3-Emp Wage: "+empWage);
