@@ -54,6 +54,17 @@ function getWorkingHours(empCheck)
             return 0;
     }
 }
-empHrs=getWorkingHours(empCheck);
-let empWage=empHrs*Wage_Per_hrs;
-console.log("UC3-Emp Wage: "+empWage);
+ empHrs=getWorkingHours(empCheck);
+ empWage=empHrs*Wage_Per_hrs;
+ console.log("UC3-Emp Wage: "+empWage);
+
+//UC4-Calculating monthly wages
+
+const Numofworkingdays=2;
+for(let day=0;day<Numofworkingdays;day++);
+{
+    let empCheck=Math.floor(Math.random()*10)%3;
+    empHrs+=getWorkingHours(empCheck);
+}
+empWage=empHrs+Wage_Per_hrs;
+console.log("UC4-Total Hrs: "+empHrs +"Emp Wages :"+empWage);
